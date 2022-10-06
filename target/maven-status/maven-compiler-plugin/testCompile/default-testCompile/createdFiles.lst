@@ -1,0 +1,6 @@
+stepDef\BlastStepDef.class
+stepDef\BoardStepDef.class
+stepDef\BaseTest.class
+stepDef\LoginStepDef.class
+stepDef\GroupChatStepDef.class
+TestRunner.class
