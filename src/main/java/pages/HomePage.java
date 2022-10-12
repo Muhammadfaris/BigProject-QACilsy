@@ -12,12 +12,11 @@ public class HomePage {
         PageFactory.initElements(DriverUtils.getDriver(), this);
     }
 
-    // pilih team card
     @FindBy(xpath = "//div[@class='Card_text__22WoI']/h1[.='BigProject']")
     WebElement chooseGroupTeam;
+
     @FindBy(xpath = "//div[@class='GlobalActionButton_text__31ND7']")
     WebElement teamPage;
-
 
     public void clickTeamGroup(){
         WebElementUtils.waitElementClickable(chooseGroupTeam);

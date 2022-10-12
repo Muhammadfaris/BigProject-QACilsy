@@ -1,6 +1,5 @@
 @Regression @Board
 Feature: Board
-
   User should be able to make board and notes to track their progress
 
   Background: User who has joined a company login with their credentials

@@ -6,10 +6,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.WebElement;
 import pages.BlastPage;
 import pages.BoardPage;
-import pages.GroupChatPage;
 import pages.HomePage;
 import utils.WebElementUtils;
 
@@ -22,6 +20,7 @@ public class BoardStepDef {
     BlastPage blastPage = new BlastPage();
 
     public String listBoardName;
+
     @When("User select Board card")
     public void userSelectBoardCard() {
         boardPage.clickBoardCard();
@@ -516,7 +515,7 @@ public class BoardStepDef {
     }
 
     @Then("User success archive their card")
-    public void userSuccessArchiveTheirCard() throws InterruptedException {
+    public void userSuccessArchiveTheirCard() {
         String actualValue = boardPage.getPopupNotif();
         System.out.println(actualValue);
         Assert.assertTrue(actualValue.contains("card has been moved to archived"));
