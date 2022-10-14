@@ -360,7 +360,6 @@ public class BlastStepDef {
     @Then("User success delete reply comment")
     public void userSuccessDeleteReplyComment() throws InterruptedException {
         Assert.assertEquals("Delete discussion on comment successful",boardPage.getPopupNotif());
-//        Assert.assertFalse(blastPage.replyCommentDisplayed());
         Assert.assertTrue(blastPage.commentNullDisplayed());
     }
 

@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
         features = {"src/test/resources/features/"},
         glue={"stepDef"}
         ,plugin = {"json:target/cucumber.json"}
-        ,tags = "@Group_Chat"
+        ,tags = "@Regression"
 )
 
 public class TestRunner {

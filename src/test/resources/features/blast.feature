@@ -101,13 +101,6 @@ Feature: Blast
     And User publish their blast
     Then User success create private blast
 
-#  @Positive @Blast_
-#  Scenario: Verify user can create blast and set due date manually when user create blast and set due date manually with input date
-#    Given User navigates to form create blast page
-#    When User set due date blast with manual date input
-##    And User publish their blast
-##    Then User success create blast with manual due date
-
   @Positive @Blast_15
   Scenario: Verify user can create blast and set due date manually when user create blast and set due date manually with datepicker
     Given User navigates to form create blast page

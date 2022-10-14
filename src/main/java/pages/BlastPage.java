@@ -1,18 +1,15 @@
 package pages;
 
 import data.DataInput;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.DriverUtils;
 import utils.WebElementUtils;
 
-import javax.xml.crypto.Data;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.time.Duration;
 import java.util.List;
 
 public class BlastPage {
@@ -74,13 +71,6 @@ public class BlastPage {
 
     @FindBy(xpath = "(//div[@class='Post_container__3xxgM'])[1]")
     WebElement blastPublishedFirstOrder;
-
-
-    @FindBy(xpath = "//div[@class='MuiFormControl-root MuiTextField-root css-i44wyl']/div")
-    WebElement manualFieldForm;
-
-    @FindBy(xpath = "//div[@class='MuiFormControl-root MuiTextField-root css-i44wyl']/div/input")
-    WebElement manualInputDate;
 
     @FindBy(xpath = "//button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-slyssw']")
     WebElement btnCalendar;
@@ -263,12 +253,6 @@ public class BlastPage {
         blastPublishedFirstOrder.click();
         Thread.sleep(1000);
     }
-
-    public void scrollToUp() throws InterruptedException {
-        WebElementUtils.scrollUp();
-        Thread.sleep(1000);
-    }
-
 
     public void clickCompleteType(){
         WebElementUtils.waitForVisibleElement(btnCompleteBlastType);
@@ -507,13 +491,13 @@ public class BlastPage {
         Thread.sleep(1000);
     }
 
-    public void clickDatePicker() throws InterruptedException {
+    public void clickDatePicker() {
         btnCalendar.click();
         WebElementUtils.waitForVisibleElement(calendarForm);
         clickDateUtil(DataInput.dueDateManual);
     }
 
-    public void clickDateUtil(String date) throws InterruptedException {
+    public void clickDateUtil(String date) {
         String edate = date.split("-")[0];
         String emonth = date.split("-")[1];
         String eyear = date.split("-")[2];
@@ -576,15 +560,4 @@ public class BlastPage {
         WebElementUtils.waitForVisibleElement(dueDateOnBlastPage);
         return dueDateOnBlastPage.getText();
     }
-
-
-
-
-
-
-
-
-
-
-
 }

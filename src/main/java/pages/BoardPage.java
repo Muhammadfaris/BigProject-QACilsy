@@ -1,18 +1,11 @@
 package pages;
 
 import data.DataInput;
-import dev.failsafe.internal.util.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import utils.CommonUtils;
 import utils.DriverUtils;
 import utils.WebElementUtils;
-
-import javax.swing.tree.TreeCellEditor;
-import java.util.List;
 
 public class BoardPage {
 
@@ -87,12 +80,6 @@ public class BoardPage {
     @FindBy(xpath ="//div[@id='notistack-snackbar']")
     WebElement popUpNotification;
 
-    @FindBy(xpath ="(//div[@class='List_List__30q9z'])")
-    List<WebElement> listContainer;
-
-    @FindBy(xpath ="(//div[@class='List_List__30q9z'])[1]")
-    WebElement listCardContainerFirstOrder;
-
     @FindBy(xpath ="(//div[@class='RoundActionMenu_container__2ta8s'])[1]")
     WebElement listActionMenuBtnFirstOrder;
 
@@ -149,9 +136,6 @@ public class BoardPage {
 
     @FindBy(xpath ="//input[@class='Main_input__qq9k9 Main_secondary__2bXP3']")
     WebElement commentOnCard;
-
-    @FindBy(xpath ="//button[@class='Main_container__3r1Cm'][2]")
-    WebElement btnPostComment;
 
     @FindBy(xpath ="//div[@class='ManageDesc_sectionDesc__3SwZN']/div")
     WebElement valueNotesOnCard;
@@ -216,9 +200,6 @@ public class BoardPage {
     @FindBy(xpath ="//div[@class='ManageDueDateContainer_footer__3YRVh']/button[.='Remove']")
     WebElement removeDueDateButton;
 
-    @FindBy(css =".DateBox_expandIcon__1AORU")
-    WebElement expandDueDateButton;
-
     @FindBy(xpath ="//div[@class='DateBox_DateBox__3UL8M']/p")
     public WebElement valueDueDateApplied;
 
@@ -244,21 +225,11 @@ public class BoardPage {
     @FindBy(xpath ="(//div[@class='Button_container__1WNuB'])[7]")
     WebElement archiveCardButtonOnDetailCard;
 
-    @FindBy(xpath ="//div[@class='CardDetailContainer_archivedSection__3l_6l']/h1")
-    WebElement headerArchivedCard;
-
-    @FindBy(xpath ="//div[@class='CardDetailContainer_archivedSection__3l_6l']")
-    WebElement headerArchivedCardDisplayed;
-
-
     @FindBy(xpath ="(//div[@class='SmallCard_SmallCard__xuek9'])[1]/div[3]/h1")
     WebElement firstCardValueName;
 
     @FindBy(xpath ="//div[@class='ArchivedItemsMenu_search__1B_5_']/form/input")
     WebElement inputSearchArchivedItems;
-
-    @FindBy(xpath ="(//div[@class='SmallCard_SmallCard__xuek9'])[1]/div/h1")
-    WebElement resultSearchFirstOrder;
 
     @FindBy(xpath ="//div[@class='ArchivedItemsCards_action__2AziP']")
     WebElement restoreButton;
@@ -492,11 +463,6 @@ public class BoardPage {
         inputFormEdit.sendKeys(DataInput.randomChar);
     }
 
-    public void clickPostComment(){
-        WebElementUtils.waitForVisibleElement(btnPostComment);
-        btnPostComment.click();
-    }
-
     public String getValueNotesOnCard(){
         WebElementUtils.waitForVisibleElement(valueNotesOnCard);
         return valueNotesOnCard.getText();
@@ -654,17 +620,7 @@ public class BoardPage {
         Thread.sleep(2000);
     }
 
-//    public String getHeaderArchivedCard() throws InterruptedException {
-//        Thread.sleep(1000);
-//        WebElementUtils.waitForVisibleElement(headerArchivedCard);
-//        return headerArchivedCard.getText();
-//    }
 
-    public boolean headerArchivedCardDisplayed() throws InterruptedException {
-        Thread.sleep(1000);
-        WebElementUtils.waitForVisibleElement(headerArchivedCardDisplayed);
-        return headerArchivedCardDisplayed.isDisplayed();
-    }
 
     public String getFirstCardValueName(){
         WebElementUtils.waitForVisibleElement(firstCardValueName);
@@ -677,38 +633,8 @@ public class BoardPage {
         Thread.sleep(2000);
     }
 
-    public String getResultSearchFirstOrder(){
-        WebElementUtils.waitForVisibleElement(resultSearchFirstOrder);
-        return resultSearchFirstOrder.getText();
-    }
-
     public void clickRestoreButton(){
         WebElementUtils.waitForVisibleElement(restoreButton);
         restoreButton.click();
     }
-
-
-
-
-
-
-
-
-//    public void addListOnStateEmptyContainer(){
-//        if (listCard.isDisplayed()){
-//            for (int i = 0 ; i<=listContainer.size(); i++){
-//                listActionMenuBtn.click();
-//                archiveThisList.click();
-//            }
-//        } else {
-////            clickAddList();
-////            inputListForm();
-//        }
-//    }
-
-
-
-
-
-
 }

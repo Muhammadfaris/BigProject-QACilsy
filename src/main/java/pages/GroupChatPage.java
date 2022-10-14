@@ -1,7 +1,6 @@
 package pages;
 
 import data.DataInput;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -10,17 +9,13 @@ import utils.WebElementUtils;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
 
 public class GroupChatPage {
 
     public GroupChatPage() {
         PageFactory.initElements(DriverUtils.getDriver(), this);
     }
-
-    LoginPageCilsy loginPageCilsy = new LoginPageCilsy();
 
     @FindBy(xpath = "(//div[@class='BoxMenu_container__1flgD'])[1]")
     WebElement groupChatCardAction;
