@@ -1,6 +1,10 @@
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import org.junit.AfterClass;
 import org.junit.runner.RunWith;
+import utils.SendReportScreenShootToEmail;
+
+import java.io.IOException;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -12,4 +16,8 @@ import org.junit.runner.RunWith;
 )
 
 public class TestRunner {
+//    @AfterClass
+//    public static void afterClass() throws IOException, InterruptedException {
+//        SendReportScreenShootToEmail.SendEmail();
+//    }
 }

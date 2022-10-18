@@ -18,4 +18,8 @@ public class DataInput {
     public static String afterMidNight = "AM";
     public static String postMidNight = "PM";
     public static String dueDateTimeOnCard = dueDateTime+" "+afterMidNight;
+
+    public static String emailFrom = "imaduddin.muhammadfaris@gmail.com"; //can change
+    public static String pswdFrom = "J490anFaris__213";
+    public static String toEmail = "imd.muhammadfaris@gmail.com";
 }
