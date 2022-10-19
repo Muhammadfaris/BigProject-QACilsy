@@ -15,7 +15,9 @@ import javax.mail.internet.*;
 public class SendReportScreenShootToEmail {
 
 //    public static void SendEmail() // change this to run with afterclass test runner
-    public static void main(String[] args) throws IOException, InterruptedException {
+//    make "psvm" on this class if you want just test send email report
+
+    public static void SendEmail() throws IOException, InterruptedException {
 
         String to = "fakhri@cilsyfiolution.com"; // to address. It can be any like gmail, hotmail etc.
         final String from = "imaduddin.muhammadfaris@gmail.com"; // from address. As this is using Gmail SMTP.

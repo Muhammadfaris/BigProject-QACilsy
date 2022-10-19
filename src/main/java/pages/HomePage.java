@@ -12,7 +12,7 @@ public class HomePage {
         PageFactory.initElements(DriverUtils.getDriver(), this);
     }
 
-    @FindBy(xpath = "//div[@class='Card_text__22WoI']/h1[.='BigProject']")
+    @FindBy(xpath = "//div[@class='Card_text__22WoI']/h1[.='BigProject']") // change team card if you want on the 'h1', like : QA-14-BP-2
     WebElement chooseGroupTeam;
 
     @FindBy(xpath = "//div[@class='GlobalActionButton_text__31ND7']")
