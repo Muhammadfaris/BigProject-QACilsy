@@ -31,6 +31,6 @@ Including several features:
 
 * JMeter File : https://drive.google.com/drive/folders/1K5B8K4DFSRkwyaiOHgqxohVptFb3VVCb?usp=sharing 
 
-## Resource Test case and report documentation ##
+## Resource Test case and Report Documentation ##
 
 * Link test cases and bug report : https://docs.google.com/spreadsheets/d/1mCfMOyvdxKARy2AoNQhhkktcREoPKxlOcOa6sn6vODM/edit?usp=sharing
