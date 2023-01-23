@@ -6,7 +6,12 @@ https://staging.cicle.app/
 
 ## About Project ##
 
-This is a functional test of Cicle Website (staging phase) using Java, Selenium and Cucumber. including several features: 
+This is a functional test (UI/Web, API) and non-functional test (Performance Test) of Cicle Website (staging phase).
+
+Using Java, Selenium and Cucumber.
+
+Including several features: 
+
 * **Board**
 * **Group chat**
 * **Blast**. 
